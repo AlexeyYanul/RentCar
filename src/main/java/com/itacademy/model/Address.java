@@ -1,23 +1,20 @@
 package com.itacademy.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "addresses")
 public class Address {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     @Column(nullable = false, length = 20)
     private String city;
 
-    @NotNull
     @Column(nullable = false, length = 20)
     private String street;
 
-    @NotNull
     @Column(nullable = false)
     private Integer home;
 

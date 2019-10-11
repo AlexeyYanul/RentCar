@@ -14,5 +14,14 @@
 
         <mapping class="com.itacademy.model.Address"/>
         <mapping class="com.itacademy.model.User"/>
+        <mapping class="com.itacademy.model.Account"/>
+        <mapping class="com.itacademy.model.UserFines"/>
+
+        <mapping class="com.itacademy.model.Engine"/>
+        <mapping class="com.itacademy.model.CarModel"/>
+        <mapping class="com.itacademy.model.Car"/>
+        <mapping class="com.itacademy.model.CarInfo"/>
+
+        <mapping class="com.itacademy.model.RentCar"/>
     </session-factory>
 </hibernate-configuration>

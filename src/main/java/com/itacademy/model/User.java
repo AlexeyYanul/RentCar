@@ -1,23 +1,18 @@
 package com.itacademy.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "users")
-public class User {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@PrimaryKeyJoinColumn(name = "id")
+public class User extends Account {
 
-    @NotNull
     @Column(nullable = false, length = 40)
     private String firstName;
 
-    @NotNull
     @Column(nullable = false, length = 40)
     private String lastName;
 
-    @NotNull()
     @Column(nullable = false)
     private String phone;
 
@@ -40,21 +35,15 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
+                "id='" + getId() + '\'' +
+                "login='" + getLogin() + '\'' +
+                "password='" + getPassword() + '\'' +
+                "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
-                ", address_id='" + homeAddress.getId() + '\'' +
+                ", homeAddress=" + homeAddress +
                 '}';
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getFirstName() {
