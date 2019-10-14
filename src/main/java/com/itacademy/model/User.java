@@ -42,7 +42,6 @@ public class User extends Account {
                 ", lastName='" + lastName + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
-                ", homeAddress=" + homeAddress +
                 '}';
     }
 

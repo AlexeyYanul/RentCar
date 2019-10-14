@@ -1,8 +1,6 @@
 package com.itacademy.model;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "car_model")
@@ -14,9 +12,6 @@ public class CarModel {
     private String name;
 
     private Integer year;
-
-    @OneToMany(mappedBy = "carModel")
-    private Set<Car> cars = new HashSet<>();
 
     public CarModel() {
     }
